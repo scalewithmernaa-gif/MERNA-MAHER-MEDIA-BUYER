@@ -73,4 +73,27 @@ footer{border-top:1px solid var(--line);padding:20px 0;color:#8e7d85;font-size:1
   </div>
 </section>
 </main><footer><div class="container footer-inner"><span>© 2026 Merna Maher · Media Buyer Portfolio</span><span>Paid Media · E-commerce · Performance Marketing</span></div></footer>
+  <script>
+const animatedItems = document.querySelectorAll(
+  '.case, .step, .panel, .skill'
+);
+
+animatedItems.forEach(item => {
+  item.style.opacity = '0';
+  item.style.transform = 'translateY(40px)';
+  item.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+animatedItems.forEach(item => observer.observe(item));
+</script>
 </body></html>
