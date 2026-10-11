@@ -73,29 +73,43 @@ footer{border-top:1px solid var(--line);padding:20px 0;color:#8e7d85;font-size:1
   </div>
 </section>
 </main><footer><div class="container footer-inner"><span>© 2026 Merna Maher · Media Buyer Portfolio</span><span>Paid Media · E-commerce · Performance Marketing</span></div></footer>
-  <script>
-const animatedItems = document.querySelectorAll(
-  '.case, .step, .panel, .skill'
-);
 
-animatedItems.forEach(item => {
-  item.style.opacity = '0';
-  item.style.transform = 'translateY(40px)';
-  item.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-});
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll(
+    '.case, .step, .panel, .skill'
+  );
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    } else {
-      entry.target.style.opacity = '0';
-      entry.target.style.transform = 'translateY(40px)';
-    }
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(item => {
+      item.style.opacity = '1';
+      item.style.transform = 'none';
+    });
+    return;
+  }
+
+  items.forEach(item => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(35px)';
+    item.style.transition =
+      'opacity 0.7s ease, transform 0.7s ease';
   });
-}, { threshold: 0.15 });
 
-animatedItems.forEach(item => observer.observe(item));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      } else {
+        entry.target.style.opacity = '0';
+        entry.target.style.transform = 'translateY(35px)';
+      }
+    });
+  }, {
+    threshold: 0.05
+  });
+
+  items.forEach(item => observer.observe(item));
+});
 </script>
 </body></html>
