@@ -1,76 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100d10">
+<meta name="description" content="Merna Maher — Media Buyer specializing in Meta Ads, e-commerce campaigns, creative testing, and performance optimization.">
 <title>Merna Maher | Media Buyer</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#101010;color:#f5f5f5;line-height:1.7}
-nav{padding:24px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #303030}
-.logo{font-weight:bold;letter-spacing:1px}
-nav a{color:#ddd;text-decoration:none;margin-left:20px;font-size:13px}
-.hero{padding:100px 8% 90px;max-width:1100px;margin:auto}
-.tag{color:#c5a572;text-transform:uppercase;letter-spacing:3px;font-size:12px}
-h1{font-size:clamp(42px,7vw,76px);line-height:1.08;margin:22px 0}
-h1 span{color:#c5a572}
-.hero p{color:#bdbdbd;max-width:600px;margin-bottom:28px}
-.btn{display:inline-block;background:#c5a572;color:#111;padding:12px 22px;text-decoration:none;font-weight:bold;border-radius:4px}
-section{padding:65px 8%;border-top:1px solid #303030}
-.wrap{max-width:1100px;margin:auto}
-h2{font-size:30px;margin-bottom:20px}
-.muted{color:#aaa}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:25px}
-.card{background:#191919;border:1px solid #333;padding:25px;border-radius:8px}
-.card h3{margin-bottom:10px;color:#c5a572}
-.card p,.card li{color:#bdbdbd;font-size:14px}
-ul{padding-left:18px}
-footer{padding:30px 8%;text-align:center;color:#aaa;font-size:13px}
-a{overflow-wrap:anywhere}
-@media(max-width:600px){nav{padding:18px 5%;align-items:flex-start;gap:12px}nav a{margin-left:8px}.hero{padding:65px 6%}section{padding:48px 6%}}
+:root{--bg:#100d10;--panel:#1b151a;--panel2:#241820;--wine:#8f2948;--wine2:#b43b5d;--cream:#f7eee9;--muted:#c0b2b8;--line:#3a2932;--gold:#e4c4ad}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--cream);line-height:1.65}a{color:inherit;text-decoration:none}.container{width:min(1120px,90%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:rgba(16,13,16,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:800;letter-spacing:.5px;font-size:18px}.brand span{color:var(--wine2)}nav{display:flex;align-items:center;gap:24px;font-size:13px;color:var(--muted)}nav a:hover{color:var(--gold)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--wine);border:1px solid var(--wine2);padding:11px 18px;border-radius:8px;font-weight:700;font-size:13px;transition:.2s}.nav-cta:hover,.btn:hover{background:var(--wine2);transform:translateY(-1px)}.btn.secondary{background:transparent;border-color:#674051}
+.hero{padding:88px 0 78px;background:radial-gradient(ellipse at 80% 30%,#381724 0%,transparent 43%)}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:58px;align-items:center}.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:800}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.03;letter-spacing:-2px;margin:20px 0}.hero h1 span{display:block;color:var(--wine2)}.lead{max-width:590px;color:var(--muted);font-size:16px;margin-bottom:26px}.actions{display:flex;gap:12px;flex-wrap:wrap}.quick-points{display:flex;gap:26px;flex-wrap:wrap;margin-top:35px}.quick-points strong{display:block;font-size:13px}.quick-points small{display:block;color:var(--muted);font-size:11px}.portrait-wrap{position:relative;max-width:390px;margin:auto}.portrait-frame{border:1px solid #8e3c58;padding:10px;border-radius:190px 190px 26px 26px;background:linear-gradient(145deg,#48202f,#1b151a);box-shadow:0 25px 70px #0008}.portrait{display:block;width:100%;height:490px;object-fit:cover;object-position:center 30%;border-radius:180px 180px 18px 18px}.photo-note{position:absolute;right:-22px;bottom:32px;background:var(--cream);color:#26151d;padding:12px 17px;border-radius:9px;font-weight:800;transform:rotate(3deg);box-shadow:0 8px 28px #0005}.photo-note small{display:block;font-weight:500;font-size:10px;color:#6d4857}
+section{padding:78px 0}.section-head{margin-bottom:32px}.section-head .eyebrow{margin-bottom:8px}.section-head h2{font-size:clamp(30px,4vw,43px);line-height:1.15}.section-head p{color:var(--muted);max-width:700px;margin-top:12px}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px}.panel h3{font-size:19px;margin-bottom:12px}.panel p{color:var(--muted)}.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}.skill{padding:15px;border-radius:10px;background:#241a21;border:1px solid #3b2932}.skill b{display:block;margin-bottom:5px;font-size:14px}.skill span{font-size:12px;color:var(--muted)}
+.cases{background:#f4e9e4;color:#24171d}.cases .section-head p{color:#705c64}.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.case{background:#fffaf7;border:1px solid #e1cfcf;border-radius:15px;overflow:hidden;box-shadow:0 10px 30px #391a2610}.case-top{padding:24px;background:linear-gradient(135deg,#2a1821,#512036);color:white}.case-top .eyebrow{color:#e9b5c5}.case-top h3{font-size:22px;margin:8px 0}.case-top p{color:#e0cfd5;font-size:13px}.case-body{padding:22px}.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:16px 0}.metric{background:#f4e9e4;border-radius:9px;padding:13px}.metric strong{display:block;font-size:23px;color:#812541;line-height:1.25}.metric span{font-size:11px;color:#6d5961}.case-body h4{margin:18px 0 6px}.case-body p,.case-body li{font-size:13px;color:#66535b}.case-body ul{padding-left:18px}.note{font-size:11px!important;color:#78656c!important;margin-top:12px}.case-link{display:inline-block;margin-top:14px;color:#842742;font-weight:800;font-size:13px}
+.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{border:1px solid var(--line);border-radius:12px;padding:19px;background:var(--panel)}.step .num{color:var(--wine2);font-weight:900;font-size:12px;letter-spacing:1px}.step h3{font-size:16px;margin:7px 0}.step p{font-size:12px;color:var(--muted)}
+.contact{padding:56px 0 70px;background:linear-gradient(120deg,#28131d,#100d10)}.contact-inner{display:flex;justify-content:space-between;align-items:center;gap:28px}.contact p{color:var(--muted);margin-top:8px}.contact-links{display:flex;gap:10px;flex-wrap:wrap}.contact-links a{border:1px solid #684052;padding:11px 15px;border-radius:8px;font-size:13px}
+footer{border-top:1px solid var(--line);padding:20px 0;color:#8e7d85;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:800px){nav{display:none}.hero{padding:55px 0}.hero-grid,.about-grid,.case-grid{grid-template-columns:1fr}.hero-grid{gap:40px}.hero-copy{order:1}.portrait-wrap{order:0;width:min(82%,340px)}.portrait{height:420px}.process-grid{grid-template-columns:repeat(2,1fr)}.contact-inner{align-items:flex-start;flex-direction:column}.section-head{margin-bottom:24px}}
+@media(max-width:430px){.quick-points{gap:16px}.panel{padding:21px}.skill-grid{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr}.hero h1{letter-spacing:-1px}.photo-note{right:-10px}}
 </style>
 </head>
 <body>
-<nav>
-<div class="logo">MERNA MAHER</div>
-<div><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Projects</a><a href="#contact">Contact</a></div>
-</nav>
-<header class="hero">
-<div class="tag">Paid Media · Performance Marketing</div>
-<h1>Turning Ad Spend Into <span>Growth.</span></h1>
-<p>I'm Merna Maher, a Junior Media Buyer interested in helping brands grow through paid advertising, creative testing, and data-driven optimization.</p>
-<a class="btn" href="#work">EXPLORE MY WORK ↘</a>
-</header>
-<section id="about"><div class="wrap">
-<h2>About Me</h2>
-<p class="muted">I have a background in content creation and copywriting, with experience in e-commerce projects. My primary hands-on focus is Meta Ads, alongside additional exposure to TikTok Ads and other advertising and tracking tools.</p>
-</div></section>
-<section id="skills"><div class="wrap">
-<h2>My Expertise</h2>
-<div class="grid">
-<div class="card"><h3>Paid Advertising</h3><p>Meta Ads · Campaign Setup · Creative Testing · Audience Testing · Optimization</p></div>
-<div class="card"><h3>Analytics & Tracking</h3><p>Meta Pixel · GTM · GA4 · Conversion Tracking</p></div>
-<div class="card"><h3>E-commerce</h3><p>Shopify · EasyOrder · Product Campaigns · Retargeting</p></div>
-<div class="card"><h3>Other Platforms</h3><p>TikTok Ads · Google Ads · Snapchat Ads</p></div>
-</div>
-</div></section>
-<section id="work"><div class="wrap">
-<h2>Selected Projects</h2>
-<p class="muted">A look at my campaign work, strategy, and learning process.</p>
-<div class="grid">
-<div class="card"><h3>Fashion E-commerce</h3><p>Campaign planning, creative testing, audience analysis, and performance optimization.</p><p style="margin-top:12px">Results and campaign details will be added after review.</p></div>
-<div class="card"><h3>Home Furniture</h3><p>Paid media support for product-focused campaigns, with attention to creative angles and customer intent.</p><p style="margin-top:12px">Results and campaign details will be added after review.</p></div>
-<div class="card"><h3>Tracking & Analytics</h3><p>Learning and practical work with pixels, conversion events, and measurement tools.</p><p style="margin-top:12px">Tracking details will be added after review.</p></div>
-</div>
-<p class="muted" style="margin-top:20px">Project descriptions are introductory. Detailed case studies and verified results will be added as available.</p>
-</div></section>
-<section id="contact"><div class="wrap">
-<h2>Let's Connect</h2>
-<p class="muted">Open to Junior Media Buyer opportunities and performance marketing projects.</p>
-<p style="margin-top:20px"><a class="btn" href="mailto:YOUR-EMAIL@example.com">CONTACT ME</a></p>
-<p class="muted" style="margin-top:16px">LinkedIn: Add your profile link before publishing.</p>
-</div></section>
-<footer>© 2026 Merna Maher · Media Buyer Portfolio</footer>
-</body>
-</html>
+<header><div class="container nav"><a class="brand" href="#home">MERNA <span>MAHER</span></a><nav><a href="#home">Home</a><a href="#about">About</a><a href="#cases">Case Studies</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav><a class="nav-cta" href="#contact">Let’s Connect ↗</a></div></header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid"><div class="hero-copy"><div class="eyebrow">Paid Media · E-commerce · Performance Marketing</div><h1>Turning Ads Into <span>Real Growth.</span></h1><p class="lead">I’m Merna Maher, a Junior Media Buyer focused on Meta Ads and e-commerce campaigns. I combine audience research, creative testing, and ongoing optimization to help brands reach their goals.</p><div class="actions"><a class="btn" href="#cases">Explore My Work →</a><a class="btn secondary" href="#contact">Get In Touch</a></div><div class="quick-points"><div><strong>Meta Ads</strong><small>Main expertise</small></div><div><strong>E-commerce</strong><small>Fashion · Home</small></div><div><strong>Performance-led</strong><small>Test · Learn · Optimize</small></div></div></div><div class="portrait-wrap"><div class="portrait-frame"><img class="portrait" src="merna.jpg" alt="Merna Maher"></div><div class="photo-note">Merna Maher <small>Media Buyer ♡</small></div></div></div></section>
+<section id="about"><div class="container"><div class="section-head"><div class="eyebrow">A Little About Me</div><h2>Strategy backed by curiosity.</h2><p>My background in content creation and copywriting helps me connect creative ideas with campaign performance.</p></div><div class="about-grid"><article class="panel"><h3>Who I Am</h3><p>I’m a junior Media Buyer with hands-on experience working on e-commerce projects across fashion and home furniture. I’ve managed campaign setup, audience targeting, budgeting, performance monitoring, and optimization, with Meta Ads as my main platform.</p></article><article class="panel" id="skills"><h3>Skills & Expertise</h3><div class="skill-grid"><div class="skill"><b>Paid Advertising</b><span>Meta Ads · TikTok Ads · Google Ads basics · Snapchat Ads</span></div><div class="skill"><b>Analytics & Tracking</b><span>Meta Pixel · GTM · GA4 · Conversion Tracking</span></div><div class="skill"><b>E-commerce</b><span>Shopify · EasyOrder · Product campaigns · Retargeting</span></div><div class="skill"><b>Optimization</b><span>Audience research · Creative testing · Budget optimization</span></div></div></article></div></div></section>
+<section class="cases" id="cases"><div class="container"><div class="section-head"><div class="eyebrow">Selected Work · Meta Ads</div><h2>Real Projects. Real Results.</h2><p>A snapshot of campaigns I managed. Metrics are presented as recorded in the available campaign screenshots; reporting windows can differ by campaign.</p></div><div class="case-grid">
+<article class="case"><div class="case-top"><div class="eyebrow">01 · Fashion E-commerce</div><h3>End-of-Season Sales</h3><p>Goal: sell remaining seasonal stock and drive website purchases.</p></div><div class="case-body"><div class="metrics"><div class="metric"><strong>35</strong><span>Website purchases</span></div><div class="metric"><strong>7.36x</strong><span>Purchase ROAS</span></div><div class="metric"><strong>EGP 69.51</strong><span>Cost per purchase</span></div><div class="metric"><strong>EGP 2,432.99</strong><span>Amount spent</span></div></div><h4>My Role</h4><ul><li>Campaign setup and budget management</li><li>Audience targeting and creative testing</li><li>Performance monitoring and optimization</li></ul><p class="note">Reporting period shown in the campaign screenshot: Aug 3–Sep 1, 2026.</p></div></article>
+<article class="case"><div class="case-top"><div class="eyebrow">02 · Home & Furniture</div><h3>Bedroom Furniture Messages</h3><p>Goal: generate conversations from potential furniture customers.</p></div><div class="case-body"><div class="metrics"><div class="metric"><strong>3,665</strong><span>Messaging conversations · Today view</span></div><div class="metric"><strong>EGP 6.98</strong><span>Cost per conversation · Week view</span></div><div class="metric"><strong>178,234</strong><span>Reach · Month view</span></div><div class="metric"><strong>473,795</strong><span>Impressions · Month view</span></div></div><h4>My Role</h4><ul><li>Campaign setup, audience targeting, and budget management</li><li>Monitoring conversations and cost efficiency</li><li>Optimization based on campaign performance</li></ul><p class="note">The figures above come from different date-range views in the screenshots; they are not one shared reporting period.</p></div></article>
+<article class="case"><div class="case-top"><div class="eyebrow">03 · Doors & Windows</div><h3>Woodwork Lead Conversations</h3><p>Goal: start customer conversations for doors and windows products.</p></div><div class="case-body"><div class="metrics"><div class="metric"><strong>589</strong><span>Messaging conversations</span></div><div class="metric"><strong>EGP 4.26</strong><span>Cost per conversation</span></div><div class="metric"><strong>41,469</strong><span>Reach</span></div><div class="metric"><strong>92,708</strong><span>Impressions</span></div></div><h4>My Role</h4><ul><li>Campaign setup and audience targeting</li><li>Budget monitoring and performance optimization</li><li>Reviewing cost per conversation and reach</li></ul></div></article>
+<article class="case"><div class="case-top"><div class="eyebrow">04 · Living Room Furniture</div><h3>Wesh El Saada</h3><p>Goal: drive messaging inquiries for sofas and living room furniture.</p></div><div class="case-body"><div class="metrics"><div class="metric"><strong>15,506</strong><span>Messaging conversations</span></div><div class="metric"><strong>~EGP 7</strong><span>Approx. cost per message</span></div><div class="metric"><strong>503,074</strong><span>Reach</span></div><div class="metric"><strong>2,056,624</strong><span>Impressions</span></div></div><h4>My Role</h4><ul><li>Campaign setup, targeting, and budget management</li><li>Monitoring messaging results and delivery</li><li>Optimizing based on observed performance</li></ul><p class="note">Cost per message is approximate, based on the information available.</p></div></article>
+</div></div></section>
+<section><div class="container"><div class="section-head"><div class="eyebrow">My Process</div><h2>How I work</h2><p>A practical, data-informed workflow from planning to optimization.</p></div><div class="process-grid"><div class="step"><div class="num">STEP 01</div><h3>Research</h3><p>Understand the audience, product, and campaign objective.</p></div><div class="step"><div class="num">STEP 02</div><h3>Plan</h3><p>Structure campaigns, budgets, audiences, and creative angles.</p></div><div class="step"><div class="num">STEP 03</div><h3>Launch & Test</h3><p>Launch campaigns and compare creative and audience performance.</p></div><div class="step"><div class="num">STEP 04</div><h3>Optimize</h3><p>Review key metrics and make informed adjustments.</p></div><div class="step"><div class="num">STEP 05</div><h3>Learn & Scale</h3><p>Build on what works and identify the next test.</p></div></div></div></section>
+<section class="contact" id="contact"><div class="container contact-inner"><div><div class="eyebrow">Let’s Connect</div><h2>Open to New Opportunities.</h2><p>Interested in junior media buyer roles and e-commerce projects.</p></div><div class="contact-links"><a href="mailto:mernamaher010@gmail.com">✉ Email Me</a><a href="https://www.linkedin.com/in/merna-maher-25b545375/" target="_blank" rel="noopener">↗ LinkedIn</a></div></div></section>
+</main><footer><div class="container footer-inner"><span>© 2026 Merna Maher · Media Buyer Portfolio</span><span>Paid Media · E-commerce · Performance Marketing</span></div></footer>
+</body></html>
